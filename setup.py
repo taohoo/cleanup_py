@@ -6,8 +6,8 @@ with open('README.MD', 'r', encoding='utf-8') as f:
 
 setup(
     name='bb_cleanup',
-    version='0.1.11',
-    description='快速清理硬盘',
+    version='0.1.18',
+    description='Clean your hard drive quickly',
     long_description=long_description,
     long_description_content_type='text/markdown',
     author='HuBo',

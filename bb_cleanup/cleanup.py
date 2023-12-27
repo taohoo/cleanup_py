@@ -31,11 +31,11 @@ def cleanup(dir_patterns, file_patterns, exclude_patterns=[]):
         for dir in dirs:
             if os.path.exists(dir) and not _fnmatch_in(dir, exclude_patterns):
                 shutil.rmtree(dir)
-                print(f"删除目录: {dir_pattern} {dir}")
+                print(f"Removed directories: {dir_pattern} {dir}")
     for file_pattern in file_patterns:
         files = find(cwd, file_pattern, mode='f')
         # files = [os.path.normpath(i) for i in files]
         for file in files:
             if os.path.exists(file) and not _fnmatch_in(file, exclude_patterns):
                 os.remove(file)
-                print(f"删除文件: {file_pattern} {file}")
+                print(f"Deleted files: {file_pattern} {file}")
