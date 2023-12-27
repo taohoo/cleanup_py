@@ -7,7 +7,6 @@ pip install bb_cleanup
 # 编译安装
 ```
 python -m build
-# twine upload dist/*   # 发布到到pipy，作者专用
 pip install .\dist\bb_cleanup-0.1.11-py3-none-any.whl
 ```
 # 命令行
