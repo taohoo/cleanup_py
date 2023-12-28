@@ -12,9 +12,9 @@ import fnmatch
 
 def find(directory, pattern):
     """
-    在目录中查找符合pattern的所有目录或者文件清单，包含所有子目录
-    :param directory: 指定的目录
-    :param pattern: 表达式，支持通配符
+    Find all directories or file lists in the directory that match the pattern, including all subdirectories
+    :param directory: directory
+    :param pattern: pattern, with Unix-Shell style wildcard
     :return:
     """
     finds = []

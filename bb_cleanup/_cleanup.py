@@ -18,7 +18,7 @@ def _format_pattern(pattern):
 
 
 def _fnmatch_in(path, patterns):
-    """判断字符串s是否以列表l中的某个item开头"""
+    """Determine if the path matches any wildcard character in the patterns"""
     file_or_dir_name = os.path.split(path)[1]
     for pattern in patterns:
         if fnmatch.fnmatch(file_or_dir_name, pattern) or fnmatch.fnmatch(path, pattern):

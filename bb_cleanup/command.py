@@ -22,7 +22,7 @@ def _str_2_list(s):
 
 
 def _warn(patterns, excludes):
-    """检测无效配置，给一些建议"""
+    """Detect invalid configurations and provide some suggestions"""
     cwd = './'.replace('/', os.sep)
     re_pattern = os.sep.replace('\\', '\\\\')
     for pattern in patterns + excludes:
@@ -41,11 +41,7 @@ def _warn(patterns, excludes):
 
 
 def main():
-    """
-    pip install之后可以通过命令行直接执行，方便进行清理操作
-    指令配置在setup.py中。
-    :return:
-    """
+    """After pip installation, it can be executed directly from the command line"""
     parser = argparse.ArgumentParser(description='Clean up the current folder')
     parser.add_argument('config_file', nargs='?', type=str, default='.cleanup', help='Configuration file, default to .cleanup in the current working directory')
     parser.add_argument('-p', '--patterns', default='',
@@ -57,7 +53,7 @@ def main():
     patterns = [] if args.patterns == '' else _str_2_list(args.patterns)
     excludes = [] if args.excludes == '' else _str_2_list(args.excludes)
 
-    # 检查配置文件是否存在
+    # Check if the configuration file exists
     if os.path.exists(args.config_file):
         if len(patterns) or len(excludes):
             print(f"{args.config_file} exists, the args in command are ignored.")

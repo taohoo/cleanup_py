@@ -7,7 +7,6 @@
 @desc:
 """
 import os
-import shutil
 
 from ._cleanup import _fnmatch_in, _format_pattern
 from ._find import find
@@ -15,11 +14,10 @@ from ._find import find
 
 def cleanup(patterns, excludes=[], cwd=None):
     '''
-    针对当前工作文件夹进行清理
-    :param dir_patterns: list of directory patterns
-    :param file_patterns: list of file patterns
-    :param exclude_patterns: list of exclude patterns
-    :return:
+    Clean up folders
+    :param patterns: list of patterns
+    :param excludes: list of exclude patterns
+    :return: None
     '''
     # 做一些处理，确保格式一致
     patterns = [_format_pattern(i) for i in patterns]
@@ -37,7 +35,8 @@ def cleanup(patterns, excludes=[], cwd=None):
 
 
 def _remove_dir(path, pattern, excludes):
-    """在dir已经和要删除的目录匹配的情况，排除目录下不需要删除的文件"""
+    """Clean up the directory that has already been matched,
+     but keep the files or folders that need to be excluded"""
     for child in os.listdir(path):
         child_path = os.path.join(path, child)
         if not _fnmatch_in(child_path, excludes):
@@ -51,6 +50,6 @@ def _remove_dir(path, pattern, excludes):
 
 
 def _remove_file(path, pattern):
-    """删除文件"""
+    """remove mathed file"""
     os.remove(path)
     print(f"Removed: {pattern} {path}")
