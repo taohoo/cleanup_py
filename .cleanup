@@ -1,3 +1,2 @@
-dir_patterns = dist,log,__pycache__,tmp,.pytest_cache,*.egg-info
-file_patterns = *.pyc
-exclude_patterns = .\venv\*
+patterns = dist,log,__pycache__,tmp,.pytest_cache,*.egg-info,*.pyc
+excludes = .\venv\*

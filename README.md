@@ -1,5 +1,5 @@
 # cleanup
-Match and clean files using Unix shell style wildcards.
+clean files and directories using Unix-Shell Style wildcards.
 # Installing with pip
 ```commandline
 pip install bb_cleanup
@@ -7,12 +7,14 @@ pip install bb_cleanup
 # # Installing with building
 ```
 python -m build
-pip install .\dist\bb_cleanup-0.1.16-py3-none-any.whl
+pip install .\dist\bb_cleanup-0.1.20-py3-none-any.whl
 ```
 # Command
 ```
 cleanup --help
-usage: cleanup [-h] [-d DIR_PATTERNS] [-f FILE_PATTERNS] [-e EXCLUDE_PATTERNS] [config_file]
+```
+```
+usage: cleanup [-h] [-p PATTERNS] [-e EXCLUDES] [config_file]
 
 Clean up the current folder
 
@@ -21,19 +23,16 @@ positional arguments:
 
 options:
   -h, --help            show this help message and exit
-  -d DIR_PATTERNS, --dir_patterns DIR_PATTERNS
-                        Matching expressions for folders, using Unix Shell style. If there are multiple expressions, use commas to separate them
-  -f FILE_PATTERNS, --file_patterns FILE_PATTERNS
-                        Match expressions for files, using Unix Shell style. If there are multiple expressions, use commas to separate them
-  -e EXCLUDE_PATTERNS, --exclude_patterns EXCLUDE_PATTERNS
-                        Match expressions for files or folders that are not cleaned, using Unix Shell style. If there are multiple expressions, use commas to separate them
+  -p PATTERNS, --patterns PATTERNS
+                        Matching expressions for folders and files, using Unix Shell style. If there are multiple expressions, use commas to separate them    
+  -e EXCLUDES, --excludes EXCLUDES
+                        Match expressions for files or folders that are not cleaned, using Unix Shell style. If there are multiple expressions, use commas    
+                        to separate them
 ```
 # Using .clean
 ```
-# Matching expressions for folders, using Unix Shell style. If there are multiple expressions, use commas to separate them
-dir_patterns = dist,log,__pycache__,tmp,.pytest_cache
-# Match expressions for files, using Unix Shell style. If there are multiple expressions, use commas to separate them
-file_patterns = *.pyc
+# Matching expressions for folders and files, using Unix Shell style. If there are multiple expressions, use commas to separate them
+patterns = dist,log,__pycache__,tmp,.pytest_cache,*.pyc
 # Match expressions for files or folders that are not cleaned, using Unix Shell style. If there are multiple expressions, use commas to separate them
-exclude_patterns = ./venv/*
+exclude_patterns = ./venv/*,*.tar.gz
 ```

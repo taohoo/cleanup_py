@@ -23,5 +23,5 @@ def test_run():
     import sys
     sys.argv = sys.argv[:1]
     print(os.getcwd())
-    os.chdir('..')
+    # os.chdir('../..')
     main()

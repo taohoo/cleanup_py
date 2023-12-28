@@ -14,9 +14,6 @@ import os
 
 def _format_pattern(pattern):
     pattern = pattern.replace('\\', os.sep).replace('/', os.sep)
-    # cwd = './'.replace('/', os.sep)
-    # if pattern.startswith(cwd):
-    #     pattern = pattern[len(cwd):]
     return pattern
 
 
