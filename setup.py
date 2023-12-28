@@ -16,7 +16,7 @@ setup(
     license='MIT License',
     packages=find_packages(),
     platforms=['all'],
-    python_requires='>=3.8',
+    python_requires='>=3.7',
     include_package_data=True,  # 打包python发行包中的include和libs，对应配置在MANIFEST.in中，
     install_requires=['environs'],
     entry_points={'console_scripts': ['cleanup = bb_cleanup.command:main']},
