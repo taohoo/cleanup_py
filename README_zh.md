@@ -7,7 +7,7 @@ pip install bb_cleanup
 # 编译安装
 ```
 python -m build
-pip install .\dist\bb_cleanup-0.1.20-py3-none-any.whl
+pip install .\dist\bb_cleanup-0.1.30-py3-none-any.whl
 ```
 # 命令行
 ```
