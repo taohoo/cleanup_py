@@ -1,10 +1,10 @@
 # cleanup
 clean files and directories using Unix-Shell Style wildcards.
-# Installing with pip
+# Installation using pip
 ```commandline
 pip install bb_cleanup
 ```
-# # Installing with building
+# Building from Sources
 ```
 python -m build
 pip install .\dist\bb_cleanup-0.1.30-py3-none-any.whl

@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Auto test python 3.5
+name: Auto test python[3.5, 3.6]
 
 on:
   push:
@@ -18,13 +18,10 @@ permissions:
 
 jobs:
   test:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
-        python-version: [ 3.5.10 ]
-        # 16.04 3.5.10
-        # 18.04: 3.3.7, 3.4.10, 3.6.15
-        # 20.04: 3.7.17, 3.8.18, 3.9.18, 3.10.13, 3.11.7, 3.12.1
+        python-version: [ 3.5.10, 3.6.15 ]
 
     steps:
     - uses: actions/checkout@v3
