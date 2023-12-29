@@ -1,13 +1,14 @@
 # cleanup
-clean files and directories using Unix-Shell Style wildcards.
+Clean files and directories using Unix-Shell Style wildcards.
+Multiple clean parameters can be used in a single command, or they can be written to a file for easy execution.
 # Installation using pip
-```commandline
+```
 pip install bb_cleanup
 ```
 # Building from Sources
 ```
 python -m build
-pip install .\dist\bb_cleanup-0.1.30-py3-none-any.whl
+pip install .\dist\bb_cleanup-0.1.31-py3-none-any.whl
 ```
 # Command
 ```
