@@ -6,6 +6,8 @@
 @time: 2023/11/21 21:41
 @desc:
 """
+import warnings
+
 from ..cleanup import cleanup
 from ..command import main
 
@@ -22,4 +24,8 @@ def test_run():
     sys.argv = sys.argv[:1]
     print(os.getcwd())
     # os.chdir('../..')
-    main()
+    with warnings.catch_warnings(record=True) as w:
+        warnings.simplefilter("always")
+        main()
+        for warning in w:
+            print(warning.message)

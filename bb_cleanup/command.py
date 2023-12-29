@@ -60,8 +60,8 @@ def main():
         env = Env()
         env.read_env(args.config_file)
         # environs中的strip好像只针对原始配置中的字符串，而不针对解析为list之后的字符元素
-        patterns = _str_2_list(env.str('patterns', strip=True))
-        excludes = _str_2_list(env.str('excludes', strip=True))
+        patterns = _str_2_list(env.str('patterns', metadata={'strip': True}))
+        excludes = _str_2_list(env.str('excludes', metadata={'strip': True}))
     if len(patterns) == 0 and len(excludes) == 0:
         parser.print_help()
         exit(0)
