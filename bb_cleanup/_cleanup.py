@@ -19,8 +19,18 @@ def _format_pattern(pattern):
 
 def _fnmatch_in(path, patterns):
     """Determine if the path matches any wildcard character in the patterns"""
-    file_or_dir_name = os.path.split(path)[1]
+    # 先检查全路径是否匹配
     for pattern in patterns:
-        if fnmatch.fnmatch(file_or_dir_name, pattern) or fnmatch.fnmatch(path, pattern):
+        if fnmatch.fnmatch(path, pattern):
             return True
+    # 把每个目录和文件名截出来再匹配一次
+    while True:
+        path, part = os.path.split(path)
+        if part != "":
+            for pattern in patterns:
+                if fnmatch.fnmatch(part, pattern):
+                    return True
+        else:
+            break
+
     return False

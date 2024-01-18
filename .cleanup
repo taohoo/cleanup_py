@@ -1,2 +1,2 @@
-patterns = dist,log,__pycache__,tmp,.pytest_cache,*.egg-info,*.pyc
-excludes = .\venv\*
+patterns = dist,log,__pycache__,tmp,.pytest_cache,*.egg-info,*.pyc,bbb.txt
+excludes = venv

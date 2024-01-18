@@ -8,7 +8,7 @@ pip install bb_cleanup
 # Building from Sources
 ```
 python -m build
-pip install .\dist\bb_cleanup-0.1.31-py3-none-any.whl
+pip install .\dist\bb_cleanup-0.1.32-py3-none-any.whl
 ```
 # Command
 ```
