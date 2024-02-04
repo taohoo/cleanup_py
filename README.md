@@ -3,12 +3,12 @@ Clean files and directories using Unix-Shell Style wildcards.
 Multiple clean parameters can be used in a single command, or they can be written to a file for easy execution.
 # Installation using pip
 ```
-pip install bb_cleanup
+pip install py_cleanup
 ```
 # Building from Sources
 ```
 python -m build
-pip install .\dist\bb_cleanup-0.1.32-py3-none-any.whl
+pip install .\dist\py_cleanup-0.1.32-py3-none-any.whl
 ```
 # Command
 ```
@@ -30,7 +30,7 @@ options:
                         Match expressions for files or folders that are not cleaned, using Unix Shell style. If there are multiple expressions, use commas    
                         to separate them
 ```
-# Using .clean
+# Using .cleanup
 ```
 # Matching expressions for folders and files, using Unix Shell style. If there are multiple expressions, use commas to separate them
 patterns = dist,log,__pycache__,tmp,.pytest_cache,*.pyc
