@@ -12,7 +12,7 @@ setup(
     long_description_content_type='text/markdown',
     author='HuBo',
     author_email='taohoo@163.com',
-    url='https://github.com/taohoo/bb-cleanup',
+    url='https://github.com/taohoo/bb_cleanup',
     license='MIT License',
     packages=find_packages(),
     platforms=['all'],
