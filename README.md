@@ -3,12 +3,12 @@ Clean files and directories using Unix-Shell Style wildcards.
 Multiple clean parameters can be used in a single command, or they can be written to a file for easy execution.
 # Installation using pip
 ```
-pip install py_cleanup
+pip install cleanup_py
 ```
 # Building from Sources
 ```
 python -m build
-pip install .\dist\py_cleanup-0.1.32-py3-none-any.whl
+pip install .\dist\cleanup_py-0.1.32-py3-none-any.whl
 ```
 # Command
 ```

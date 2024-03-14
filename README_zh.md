@@ -3,12 +3,12 @@
 可以在一条命令中使用多个删除参数，也可以将参数写到文件，以方便反复执行。
 # 从pip安装
 ```
-pip install py_cleanup
+pip install cleanup_py
 ```
 # 编译安装
 ```
 python -m build
-pip install .\dist\py_cleanup-0.1.32-py3-none-any.whl
+pip install .\dist\cleanup_py-0.1.32-py3-none-any.whl
 ```
 # 命令行
 ```

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @author: hubo
-@project: py_cleanup
+@project: cleanup_py
 @file: clean.py
 @time: 2023/11/21 19:59
 @desc:
