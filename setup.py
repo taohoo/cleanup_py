@@ -6,7 +6,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='cleanup_py',
-    version='0.1.32',
+    version='0.1.33',
     description='clean files and directories using Unix-Shell Style wildcards',
     long_description=long_description,
     long_description_content_type='text/markdown',

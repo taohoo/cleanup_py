@@ -19,5 +19,5 @@ cleanup --help
 # 需要清除的文件或文件夹的匹配表达式
 patterns = dist,log,__pycache__,tmp,.pytest_cache,*.pyc
 # 清除时需要排除的文件或文件夹的表达是
-excludes = ./venv/*
+excludes = venv,*.tar.gz
 ```

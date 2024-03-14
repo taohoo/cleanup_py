@@ -35,5 +35,5 @@ options:
 # Matching expressions for folders and files, using Unix Shell style. If there are multiple expressions, use commas to separate them
 patterns = dist,log,__pycache__,tmp,.pytest_cache,*.pyc
 # Match expressions for files or folders that are not cleaned, using Unix Shell style. If there are multiple expressions, use commas to separate them
-exclude_patterns = ./venv/*,*.tar.gz
+exclude_patterns = venv,*.tar.gz
 ```
